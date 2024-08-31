@@ -1,5 +1,5 @@
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +8,7 @@ body{
     margin: 0;
 }
 
-.ticket{
-    box-sizing: border-box;
+.ticket {
     width: 782px;
     height: 273px;
     background-color: #efc684;
@@ -17,26 +16,49 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.popcorn img{
-    width: 134.26px;
-    margin-right: 41px;
-    transform: rotate(1.62deg);
-}
-
-.popcorn{
+.popcorn-container {
     display: flex;
-    justify-content: flex-end;
-    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
     width: 225px;
     border-left: 2px dashed red;
+    height: 100%;
 }
 
-.details{
+.popcorn img {
+    width: 130px;
+    transform: rotate(1.62deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.popcorn-container:hover .popcorn img {
+    transform:  rotate(5deg);
+}
+
+.little-popcorns  img {
+    width: 20px;
+    height: auto;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.popcorn-container:hover img {
+    opacity: 1;
+}
+
+.little-popcorns img:nth-child(2) {
+    position: relative;
+    top: 10px;
+}
+
+.details {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -47,14 +69,14 @@ body{
     position: relative;
 }
 
-.left-section{
+.left-section {
     width: 45%;
 }
 
-h1{
+h1 {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
@@ -63,16 +85,13 @@ h1{
     margin-bottom: 20px;
 }
 
-.ticket-type{
+.ticket-type {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
-h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h2 {
     border: 1px solid black;
     width: 82px;
     height: 44px;
@@ -85,11 +104,20 @@ h2{
     margin-bottom: 35px;
 }
 
-h2.price{
+h2.price {
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.middle-section p{
+h2.vip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-section p {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -99,14 +127,16 @@ h2.price{
     margin-bottom: 25px;
 }
 
-.middle-section{
+.middle-section {
     margin-left: 45px;
     margin-bottom: 15px;
 }
 
-.barcode{
+.barcode {
     margin-top: 45px;
 }
 
-
-
+.middle-section p.gate-seat {
+    display: flex;
+    justify-content: space-between;
+}
