@@ -38,7 +38,7 @@ body {
 }
 
 .popcorn-container:hover .popcorn img {
-    transform:  rotate(5deg);
+    transform: rotate(5deg);
 }
 
 .little-popcorns  img {
@@ -46,10 +46,13 @@ body {
     height: auto;
     margin-bottom: 15px;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transform: translateY(20px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* transition: 0.3s ease-in-out; */
 }
 
 .popcorn-container:hover img {
+    transform: translateY(0);
     opacity: 1;
 }
 
